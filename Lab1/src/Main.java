@@ -6,30 +6,32 @@ import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
-           System.out.println("1 для программы, для выхода любую другую");
-           Integer inp;
-           Scanner sc = new Scanner(System.in);
-           inp = sc.nextInt();
+        Integer inp;
+        do {
+            System.out.println("Нажмите 1 для выполнения программы, для выхода- 0");
+            Scanner sc = new Scanner(System.in);
+            inp = sc.nextInt();
 
-           switch (inp) {
-               case 1:
-                   Scanner in = new Scanner(System.in);
-                   double a, b, c, s;
-                   System.out.println("Введите а: ");
-                   a = in.nextDouble();
-                   System.out.println("Введите b: ");
-                   b = in.nextDouble();
-                   System.out.println("Введите угол: ");
-                   c = in.nextDouble();
-                   s = a * b * Math.sin(c);
-                   System.out.print("Площадь равна1: " + s);
-                   break;
-               case 0:
-                   System.exit(0);
-               }
-           }
-       }
-
+            switch (inp) {
+                case 1:
+                    Scanner in = new Scanner(System.in);
+                    double a, b, c, s;
+                    System.out.println("Введите а: ");
+                    a = in.nextDouble();
+                    System.out.println("Введите b: ");
+                    b = in.nextDouble();
+                    System.out.println("Введите угол: ");
+                    c = in.nextDouble();
+                    s = a * b * Math.sin(c);
+                    System.out.println("Площадь равна: " + s);
+                    break;
+                case 0:
+                    System.exit(0);
+            }
+        }
+        while (inp != 0);
+    }
+}
 
 
 
